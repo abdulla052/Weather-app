@@ -73,7 +73,7 @@ function countryWeather() {
         });
 }
 
-search.addEventListener('click', countryWeather());
+search.addEventListener('click', countryWeather);
 
 searchInput.addEventListener('keypress', (e) => {
     if (e.key ===  "Enter") {
