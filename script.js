@@ -3,8 +3,9 @@ const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error = document.querySelector('.not-found');
+const searchInput = document.querySelector('.search-box input');
 
-search.addEventListener('click', () => {
+function countryWeather() {
     const APIKey = '33714c4ef2d00de768f43d1ebf238b92';
     const city = document.querySelector('.search-box input').value;
 
@@ -50,7 +51,7 @@ search.addEventListener('click', () => {
                     break;
 
                 case 'Haze':
-                    image.src = 'images/mist.png';
+                    image.src = 'images/haze.png';
                     break;
 
                 default:
@@ -70,5 +71,12 @@ search.addEventListener('click', () => {
 
 
         });
+}
 
+search.addEventListener('click', countryWeather());
+
+searchInput.addEventListener('keypress', (e) => {
+    if (e.key ===  "Enter") {
+        countryWeather();
+    }
 });
