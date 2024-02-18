@@ -1,4 +1,3 @@
 ﻿# Weather-app
 
-![](Default.png)
-![Weather App](Screenshot.png)
+![](Default.png) ![Weather App](Screenshot.png)
